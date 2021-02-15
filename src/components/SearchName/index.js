@@ -11,7 +11,7 @@ const SearchName = () => {
                 <input
                     className="form-control mr-sm-2"
                     type="search"
-                    placeholder="Search Employee by Name"
+                    placeholder="Type Employee Name..."
                     aria-label="Search"
                     onChange={e => context.handleSearchChange(e)}
                 />

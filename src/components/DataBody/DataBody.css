@@ -1,5 +1,6 @@
 .name-cell{
     text-transform: capitalize;
     background-color: cyan;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
