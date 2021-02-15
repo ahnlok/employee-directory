@@ -1,12 +1,12 @@
 import React from "react"
 
-function Detail(item) {
+const Detail = ( {item }) => {
     return (
         <div className="card">
             <div className="card-inner">
                 <div className="card-front">
-                    <img src={item.picture[1]} alt='' />
-                    <h1>{item.name}</h1>   
+                    <h1 className="employee-name">{item.name}</h1>   
+                    <img src={item.picture[1]} alt='' />   
                 </div>
                 <div className="card-back">
                     <h1>{item.name}'s Detail</h1>
