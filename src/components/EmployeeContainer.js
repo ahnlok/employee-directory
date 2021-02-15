@@ -3,7 +3,7 @@ import Container from "./Container";
 import EmployeeSearch from "./EmployeeSearch";
 import API from "../utils/API";
 
-class OmdbContainer extends components {
+class EmployeeContainer extends components {
     state = {
         result: {},
         search: ""
@@ -34,8 +34,37 @@ class OmdbContainer extends components {
     render() {
         return (
             <Container>
+                <Col size="md-8">
                 <Card
+                    heading={this.state.result.name || "Search for the Employee"}
+                >
+                    {this.state.result.name ? (
+                        <EmployeeInformation
+                            name={this.state.result.name[1,2]}
+                            email={this.state.result.email}
+                            phone={this.state.result.cell}
+                            gender={this.state.result.gender}
+                            birthday={this.state.result.dob[0]}
+                            src={this.state.result.picture[1]}
+                            location={this.state.result.location[0,1,2,3]}
+                        />
+                    ) : (
+                        <h3>No Employee Result Found</h3>
+                    )}
+                    </Card>
+                </Col>
+                <Col size="md-4">
+                    <Card heading="Search">
+                        <EmployeeSearch
+                            value={this.state.search}
+                            handleInputChange={this.handleInputChange}
+                            handleFormSubmit={this.handleFormSubmit}
+                        />
+                    </Card>
+                </Col>
             </Container>
         )
     }
 }
+
+export default EmployeeContainer;
