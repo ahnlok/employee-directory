@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Container from "./Container";
-import EmployeeSearch from "./EmployeeSearch";
+import EmployeeSearch from "./Search";
 import API from "../utils/API";
 
 class EmployeeContainer extends components {
