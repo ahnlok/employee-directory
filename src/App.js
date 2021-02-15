@@ -1,12 +1,8 @@
+import React from "react";
+import EmployeeContainer from "./components/EmployeeContainer";
 
-import React, { Component } from 'react'
-
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+function App() {
+  return <EmployeeContainer />
 }
+
+export default App;
